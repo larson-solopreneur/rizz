@@ -49,40 +49,42 @@ export default function AuthPage() {
   };
 
   return (
-    <div className="container relative flex-col items-center justify-center min-h-screen grid lg:max-w-none lg:grid-cols-2 lg:px-0">
-      <div className="relative hidden h-full flex-col bg-muted p-10 text-white lg:flex dark:border-r">
-        <div className="absolute inset-0 bg-black">
-          <img
-            src="https://images.unsplash.com/photo-1471174617910-3e9c04f58ff5"
-            alt="Authentication background"
-            className="object-cover w-full h-full opacity-50"
-          />
-        </div>
-        <div className="relative z-20 flex items-center text-lg font-medium">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="mr-2 h-6 w-6"
-          >
-            <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" />
-          </svg>
-          ストリートナンパ実績管理
-        </div>
-        <div className="relative z-20 mt-auto">
-          <blockquote className="space-y-2">
-            <p className="text-lg">
-              効率的な実績管理で、あなたのナンパスキルを最大限に引き出します。
-            </p>
-          </blockquote>
+    <div className="flex min-h-screen">
+      <div className="hidden w-1/2 bg-muted lg:block">
+        <div className="relative h-full">
+          <div className="absolute inset-0 bg-black">
+            <img
+              src="https://images.unsplash.com/photo-1471174617910-3e9c04f58ff5"
+              alt="Authentication background"
+              className="object-cover w-full h-full opacity-50"
+            />
+          </div>
+          <div className="relative z-20 flex flex-col justify-between h-full p-10">
+            <div className="flex items-center text-lg font-medium text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="mr-2 h-6 w-6"
+              >
+                <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" />
+              </svg>
+              ストリートナンパ実績管理
+            </div>
+            <blockquote className="space-y-2">
+              <p className="text-lg text-white">
+                効率的な実績管理で、あなたのナンパスキルを最大限に引き出します。
+              </p>
+            </blockquote>
+          </div>
         </div>
       </div>
-      <div className="lg:p-8">
-        <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
+      <div className="flex items-center justify-center w-full lg:w-1/2">
+        <div className="w-full max-w-[350px] px-4">
           <Tabs defaultValue="login" className="w-full">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="login">ログイン</TabsTrigger>
