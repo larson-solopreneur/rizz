@@ -57,16 +57,16 @@ export default function HomePage() {
           </div>
         </header>
         <main className="flex-1">
-          <div className="container grid gap-6 pb-8 pt-6 md:py-10">
-            <div className="flex flex-col items-center justify-center space-y-4">
-              <h1 className="text-3xl font-bold tracking-tight">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col items-center justify-center space-y-6 py-10">
+              <h1 className="text-3xl font-bold tracking-tight text-center">
                 ようこそ {user?.email} さん
               </h1>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-center">
                 今日も素敵な出会いを見つけましょう
               </p>
             </div>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
               <StatsCard
                 title="本日の声かけ数"
                 value={todayApproaches?.length || 0}
@@ -88,11 +88,11 @@ export default function HomePage() {
                 icon={<Timer className="h-4 w-4 text-muted-foreground" />}
               />
             </div>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
-              <div className="col-span-4">
+            <div className="mt-8 grid gap-6 md:grid-cols-7">
+              <div className="md:col-span-4">
                 <ApproachButton />
               </div>
-              <div className="col-span-3">
+              <div className="md:col-span-3">
                 {/* TODO: 最近の記録一覧 */}
               </div>
             </div>
